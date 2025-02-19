@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.MainController">
+    <top>
+        <ToolBar>
+            <Button text="Добавить" onAction="#handleAdd"/>
+            <Button text="Изменить" onAction="#handleEdit"/>
+            <Button text="Удалить" onAction="#handleDelete"/>
+        </ToolBar>
+    </top>
+    <center>
+        <TableView fx:id="tableView">
+            <columns>
+                <TableColumn text="id" fx:id="idColumn"/>
+                <TableColumn text="Имя" fx:id="nameColumn"/>
+                <TableColumn text="Описание" fx:id="descriptionColumn"/>
+                <TableColumn text="Сделано" fx:id="createdAtColumn"/>
+                <TableColumn text="Обновлено" fx:id="updatedAtColumn"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
